@@ -34,7 +34,7 @@ require_once('wpmh.php');
         if (!isset($error) && strlen($message)> 20) {
 
             $to = "support@mailerplugin.com";
-            $subject = "WP Mailer - " . $nature;
+            $subject = "WP Easy Post Mailer - " . $nature;
             $content =
                 "Name: <strong>{$name}</strong><br>" .
                 "Email: <strong>{$email}</strong><br>" .
