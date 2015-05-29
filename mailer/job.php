@@ -5,10 +5,10 @@ function wpm_run_jobs() {
     // Dont think we need to create a lock out due to WP_CRON_LOCK_TIMEOUT;
 
     //if (get_option('wpm_cron_running') != true) {
-        update_option('wpm_cron_running', true);
-        update_option('wpm_cron_lastran', time());
+        //update_option('wpm_cron_running', true);
+        //update_option('wpm_cron_lastran', time());
 
-        $jobs = wpm_get_scheduled_jobs(); // Get only waiting jobs
+        $jobs = wpm_get_scheduled_jobs(); // Get only scheduled and in-progress jobs
         if (count($jobs)) {
             foreach ($jobs as $job) {
                 wpm_send_job($job);

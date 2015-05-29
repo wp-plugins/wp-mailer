@@ -46,15 +46,24 @@ function wpm_send_job($job) {
                 rewind_posts();
                 the_post();
                 $html = wpm_get_mailer($template_path);
-                //unset($title_matches, $res);
-                $res = preg_match("/<title>(.*)<\/title>/siU", $html, $title_matches);
-                if ($res) {
+                preg_match("/<title>(.*)<\/title>/siU", $html, $title_matches);
+                if ($title_matches[1]) {
                     $subject = preg_replace('/\s+/', ' ', $title_matches[1]);
                     $subject = trim($subject);
+                    $subject = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $subject);
                 }
-                if (!$subject) $subject = 'hello';
 
-                wp_mail($subscriber->sub_email, $subject, $html, $headers);
+                preg_match("/<style[^>]*>(.*)<\/style>/smiU", $html, $css_matches);
+                if ($css_matches[1]) {
+                    $css = $css_matches[1];
+                }
+
+                $emogrifier = new \Pelago\Emogrifier();
+                $emogrifier->setHtml($html);
+                $emogrifier->setCss($css);
+                $inline = $emogrifier->emogrify();
+
+                wp_mail($subscriber->sub_email, $subject, $inline, $headers);
 
                 $buff_item++;
 

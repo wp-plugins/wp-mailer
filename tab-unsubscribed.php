@@ -81,7 +81,7 @@ class WPM_Table extends WP_List_Table {
 
         $this->process_bulk_action();
 
-        if (isset($_REQUEST['s'])) {
+        if (isset($_REQUEST['s']) && strlen($_REQUEST['s'])) {
             $search = array();
             $search_query = $_REQUEST['s'];
             $search_exclude = array('cb', 'action');
@@ -91,7 +91,7 @@ class WPM_Table extends WP_List_Table {
             $search = 'AND ('.implode(' OR ', $search).')';
         }
 
-        $total_items = $wpdb->get_var("SELECT COUNT(sub_id) FROM $table_name ".(isset($search)?$search:''));
+        $total_items = $wpdb->get_var("SELECT COUNT(sub_id) FROM $table_name WHERE `sub_removed` <> '0000/00/00 00:00:00' ".(isset($search)?$search:''));
 
         $paged = isset($_REQUEST['paged']) ? max(0, intval($_REQUEST['paged']) - 1) : 0;
         $orderby = (isset($_REQUEST['orderby'])&&in_array($_REQUEST['orderby'], array_keys($this->get_sortable_columns())))?$_REQUEST['orderby']:$def_order[0];

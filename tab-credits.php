@@ -7,14 +7,14 @@ require_once('wpmh.php');
 
 
 ?>
-<h3><em>Thank you ever so much for trying our plugin!</em></h3>
+<h3><em>Thank you ever so much for downloading our plugin!</em></h3>
+
 <p>Please refrain from giving a bad rating at this stage as this is still in the
     early stages of development but please do let us know!</p>
 
-<p>Our highest priority is to ensure that this plugin works well, secure and without bugs. If anyone would like to
-    help with writing the documentation I am more than happy to give credits to your work.</p>
+<p>Our highest priority is to ensure that this plugin works well, secure and without bugs.</p>
 
-<p>If you do find any bugs or would like to suggest a feature then please fill out the form below to send me a mail.
+<p>If you do come across any issues or would like to suggest a new feature then please complete the form below to send us a message.
     Please do not ask me to login an help you setup the plugin.</p>
 
 <form method="post" action="">
@@ -24,6 +24,7 @@ require_once('wpmh.php');
     $name = isset($_REQUEST['name'])?sanitize_text_field($_REQUEST['name']):'';
     $email = isset($_REQUEST['email'])?sanitize_email($_REQUEST['email']):'';
     $site = get_site_url();
+    $wpver = get_bloginfo('version');
     $nature = isset($_REQUEST['subject'])?sanitize_text_field($_REQUEST['subject']):'';
     $message = isset($_REQUEST['message'])?sanitize_text_field($_REQUEST['message']):'';
 
@@ -39,6 +40,7 @@ require_once('wpmh.php');
                 "Name: <strong>{$name}</strong><br>" .
                 "Email: <strong>{$email}</strong><br>" .
                 "Website: <strong>{$site}</strong><br>" .
+                "Version: <strong>{$wpver}</strong><br>" .
                 "Message: <br><strong>{$message}</strong>";
 
             $headers = array(
@@ -77,7 +79,7 @@ require_once('wpmh.php');
         <tr>
             <th scope="row"><label for="name">Your WordPress</label></th>
             <td>
-                <?php echo $site; ?>
+                Address: <?php echo $site; ?> - Version: <?php echo $wpver; ?>
             </td>
         </tr>
 

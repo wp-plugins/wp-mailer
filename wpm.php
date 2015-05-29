@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Wordpress Mailer
+Plugin Name: WP Easy Post Mailer
 Plugin URI: http://www.webfwd.co.uk/
-Description: The easiest way to send your blog posts as email newsletters automatically straight from your WordPress admin
-Version: 0.1
-Author: WEBFWD LTD - Richard Leishman
+Description: The easiest way to automatically send your blog posts straight to your email subscribers.
+Version: 0.2
+Author: Webforward
 Author URI: http://www.mailerplugin.com/
 License: GPL
 
@@ -32,7 +32,6 @@ function wpm_install() {
     if (!get_option('wpm_autosend')) update_option('wpm_autosend', 1);
     if (!get_option('wpm_sendername')) update_option('wpm_sendername', get_option('blogname'));
     if (!get_option('wpm_senderemail')) update_option('wpm_senderemail', get_option('admin_email'));
-    //if (!get_option('wpm_senderreply')) update_option('wpm_senderreply', '');
     if (!get_option('wpm_batchsize')) update_option('wpm_batchsize', 500);
     if (!get_option('wpm_batchpause')) update_option('wpm_batchpause', 5);
     if (!get_option('wpm_unsubscribemsg')) update_option('wpm_unsubscribemsg', 'Your email address has been removed from our mailing list.');
@@ -164,6 +163,7 @@ require_once('mailer/subscriber.php');
 require_once('mailer/mail.php');
 require_once('mailer/template.php');
 require_once('mailer/widget.php');
+require_once('mailer/emogrifier.php');
 
 function wpm_status($success, $failed, $type, $action) {
     if (isset($failed) && $failed>0) echo '<div class="notice notice-warning"><p>Notice, '.(isset($success) && $success>0?($failed>0?'<strong>'.$success.'</strong> '.$type.($success<>1?'s have':' has').' been '.$action.', but':''):'').'

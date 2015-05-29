@@ -1,6 +1,6 @@
 === WP Easy Post Mailer ===
 Contributors: webfwd
-Donate link: http://bit.ly/1RuCoxb
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SC73FL5DKG6CW
 Tags: mail, email, newsletter, subscribe, list, mailinglist, mail list, mailing list, campaign monitor, mailchimp, constant contact, subscriber, subscribers, email marketing, marketing, widget, post, plugin, admin, posts, sidebar, page, pages, mailchimp, aweber, vertical response, icontact, myemma, madmimi, getresponse, infusionsoft, ontraport, gravity forms, contact form 7
 Requires at least: 3.0
 Tested up to: 4.2.2
@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The easiest way to send your blog posts as email newsletters automatically straight from your WordPress admin.
+The easiest way to automatically send your blog posts straight to your email subscribers.
 
 == Description ==
 
@@ -37,13 +37,13 @@ A lot of time and hard work has gone into WP Easy Post Mailer, if you like it th
 == Installation ==
 
 * <em>Step 1:</em> Upload `wp-mailer` folder to the `/wp-content/plugins/` directory or click `Install` within the Add new plugin section.
-* <em>Step 2:</em> Activate the plugin through the 'Plugins' menu in WordPress
-* <em>Step 3:</em> Goto WP Easy Post Mailer -> Forms and create a subscribe form
+* <em>Step 2:</em> Activate the plugin through the 'Plugins' menu inside the WordPress admin.
+* <em>Step 3:</em> Goto WP Mailer -> Forms and create a subscribe form.
 * <em>Step 4:</em> Embed the form in your page by using one of three methods:-
     * Go to Appearance -> Widgets and drag `WP Mailer Subscribe Form` widget into a sidebar.
     * Use the shortcode `[wpm_form id="1"]`.
     * Call the form within php code `<?php echo wpm_form(1); ?>`.
-* <em>Step 5:</em> If your would like to enable automatic sending after each post then enable `Automatic Mail Sending` in WP Easy Post Mailer -> Settings.
+* <em>Step 5:</em> If your would like to disable automatic sending of emails then change `Automatic Mail Sending` to NO in WP Mailer -> Settings.
 
 If your posts queue up for a long time on the campaigns page then you need to ensure that your WordPress cron is running correctly.
 
@@ -61,9 +61,19 @@ If your posts queue up for a long time on the campaigns page then you need to en
 
 = Can this plugin be used to send emails when I publish a new post or page? =
 
-Yes, currently it supports the ability to send email newsletters of WordPress posts only but in future we may look into adding services like Amazon SES.
+Yes, currently it supports the ability to send email newsletters of WordPress posts only but we will look at pages and other custom post types in the near future.
 
 == Changelog ==
+
+= 0.2
+- Fix SQL error for counting subscribers.
+- Wording changes.
+- Decode html entities on subject.
+- Added Emogrifier by John Reeve to convert seperated HTML and CSS into inline HTML+CSS.
+- Changed bitly donate link as they think its spam.
+- Working pretty well with WP_DEBUG enabled.
+- Added WordPress version to credits form.
+
 
 = 0.1
 - After weeks of programming, we have finally launched the plugin, go easy on us.

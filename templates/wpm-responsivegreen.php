@@ -152,5 +152,3 @@ defined('ABSPATH') or die('You can not access this file directly.');
 </table>
 </body>
 </html>
-</body>
-</html>
