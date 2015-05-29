@@ -12,13 +12,13 @@ The easiest way to send your blog posts as email newsletters automatically strai
 
 == Description ==
 
-WP Easy Post Mailer allows visitors to enter their name and email address on your website to be subscribed to receive updates of new posts from your blog. When you create a new WordPress post, WP Easy Post Mailer can automatically send out a styled email newsletter to all subscribers. Subscribers can unsubscribe at any time by clicking the unsubscribe link in the email newsletter. At the moment WPMailer comes with two mail templates but we hope that people will submit their own templates and allow us to add them in to the plugin.
+WP Easy Post Mailer allows your visitors to enter their name and email address on your website to be subscribed to receive updates of new posts from your blog. When you create a new WordPress post, WP Easy Post Mailer will automatically send out a styled email newsletter to all subscribers.
 
-We developed WP Easy Post Mailer to encompass all of the features that people have suggested that we add to our other plugins. We could not find any plugin that are straight to the point, allow users to maintain a list of subscribers and send out regular email newsletters without incorporating 3rd party paid platforms.
+WP Easy Post Mailer can be customised and comes with two preset mail templates but we hope that people will submit their own templates and allow us to add them in to the plugin.
 
-The subscribe forms can not only be customized but can also be displayed on any WordPress page, post or widget by using the `WP Easy Post Mailer Subscribe` widget, shortcode `[wpm_form]` or php function `wp_form()`.
+We could not find any plugin that get straight to the point and allow users to manage a large list of subscribers and easily send out regular email newsletters without incorporating 3rd party paid platforms.
 
-PLease note that by default, WP Easy Post Mailer uses the built in mail sending class and you may need to check with your hosting provider as to how many emails you can send within your hosting package.
+WP Easy Post Mailer currently uses the built in WordPress mail sending class and you may need to check with your hosting provider as to how many emails you can send out.
 
 **Features are as follows:-**
 
@@ -40,7 +40,7 @@ A lot of time and hard work has gone into WP Easy Post Mailer, if you like it th
 * <em>Step 2:</em> Activate the plugin through the 'Plugins' menu in WordPress
 * <em>Step 3:</em> Goto WP Easy Post Mailer -> Forms and create a subscribe form
 * <em>Step 4:</em> Embed the form in your page by using one of three methods:-
-    * Go to Appearance -> Widgets and drag `WP Easy Post Mailer Subscribe Form` widget into a sidebar.
+    * Go to Appearance -> Widgets and drag `WP Mailer Subscribe Form` widget into a sidebar.
     * Use the shortcode `[wpm_form id="1"]`.
     * Call the form within php code `<?php echo wpm_form(1); ?>`.
 * <em>Step 5:</em> If your would like to enable automatic sending after each post then enable `Automatic Mail Sending` in WP Easy Post Mailer -> Settings.

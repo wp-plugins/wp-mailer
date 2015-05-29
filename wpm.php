@@ -29,7 +29,7 @@ function wpm_install() {
     // Lets set some defaults
     update_option('wpm_cron_running', false);
     if (!get_option('wpm_mail_template')) update_option('wpm_mail_template', 'wpm-default.php');
-    if (!get_option('wpm_autosend')) update_option('wpm_autosend', 0);
+    if (!get_option('wpm_autosend')) update_option('wpm_autosend', 1);
     if (!get_option('wpm_sendername')) update_option('wpm_sendername', get_option('blogname'));
     if (!get_option('wpm_senderemail')) update_option('wpm_senderemail', get_option('admin_email'));
     //if (!get_option('wpm_senderreply')) update_option('wpm_senderreply', '');
