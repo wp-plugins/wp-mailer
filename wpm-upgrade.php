@@ -11,5 +11,5 @@ if ($dbver > $plver){
 
 if ($dbver <= '0.1') {} // 29-May-2015 - Nothing to do in this version
 if ($dbver <= '0.2') {} // 29-May-2015 - Nothing to do in this version
-
+if ($dbver <= '0.3') {} // 16-June-2015 - Nothing to do in this version
 update_option('wpm_version', $plver);

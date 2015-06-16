@@ -43,8 +43,8 @@ if (count($templates)) {
                         <?php } else { ?>
                         <a class="install-now button" data-slug="<?php echo $slug; ?>" href="?page=<?php echo WPM_FOLDER ?>/tab-templates.php&activate=<?php echo base64_encode($template); ?>" aria-label="Install <?php echo $data['name']; ?>" data-name="<?php echo $data['name']; ?> by <?php echo $data['author']; ?>">Activate Now</a>
                         <?php } ?></li>
-
-                        <li><a href="?action=preview_template&template=<?php echo $template; ?>&width=700&height=600" class="thickbox" aria-label="Preview <?php echo $data['name']; ?>" data-title="<?php echo $data['name']; ?>">Preview</a></li>
+                        <li><a href="?action=wpm_preview_template&template=<?php echo $template; ?>&width=700&height=600" class="thickbox" aria-label="Preview <?php echo $data['name']; ?>" data-title="<?php echo $data['name']; ?>">Preview</a></li>
+                        <li><a href="?action=wpm_send_test&template=<?php echo $template; ?>&width=300&height=230&TB_iframe=true" class="thickbox" aria-label="Send Test Email" data-title="<?php echo $data['name']; ?>">Test Email</a></li>
                     </ul>
                 </div>
                 <div class="desc column-description">

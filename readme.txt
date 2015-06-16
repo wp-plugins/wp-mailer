@@ -65,15 +65,20 @@ Yes, currently it supports the ability to send email newsletters of WordPress po
 
 == Changelog ==
 
+= 0.3
+* Few more fixes so that the plugin works under WP_DEBUG=true.
+* Update preview template actions so that it does not conflict with other plugins.
+* ability to send a test email to see what each template looks like.
+
 = 0.2
-- Fix SQL error for counting subscribers.
-- Wording changes.
-- Decode html entities on subject.
-- Added Emogrifier by John Reeve to convert seperated HTML and CSS into inline HTML+CSS.
-- Changed bitly donate link as they think its spam.
-- Working pretty well with WP_DEBUG enabled.
-- Added WordPress version to credits form.
+* Fix SQL error for counting subscribers.
+* Wording changes.
+* Decode html entities on subject.
+* Added Emogrifier by John Reeve to convert seperated HTML and CSS into inline HTML+CSS.
+* Changed bitly donate link as they think its spam.
+* Working pretty well with WP_DEBUG enabled.
+* Added WordPress version to credits form.
 
 
 = 0.1
-- After weeks of programming, we have finally launched the plugin, go easy on us.
+* After weeks of programming, we have finally launched the plugin, go easy on us.
