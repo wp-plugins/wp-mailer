@@ -63,7 +63,14 @@ If your posts queue up for a long time on the campaigns page then you need to en
 
 Yes, currently it supports the ability to send email newsletters of WordPress posts only but we will look at pages and other custom post types in the near future.
 
+= How can I create my own email template? =
+
+Please take a look at the following discussion post https://wordpress.org/support/topic/how-to-make-your-own-theme
+
 == Changelog ==
+
+= 0.4
+* Updated templates page to make it more clear on how to make a theme.
 
 = 0.3
 * Few more fixes so that the plugin works under WP_DEBUG=true.

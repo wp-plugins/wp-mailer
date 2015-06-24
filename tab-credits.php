@@ -12,6 +12,8 @@ require_once('wpmh.php');
 <p>Please refrain from giving a bad rating at this stage as this is still in the
     early stages of development but please do let us know!</p>
 
+<p>If you like the plugin then please <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SC73FL5DKG6CW">donate</a>.</p>
+
 <p>Our highest priority is to ensure that this plugin works well, secure and without bugs.</p>
 
 <p>If you do come across any issues or would like to suggest a new feature then please complete the form below to send us a message.

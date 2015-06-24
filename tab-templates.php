@@ -63,7 +63,7 @@ if (count($templates)) {
 ?>
     <div style="clear:both"></div>
     <h3>Make your own templates!</h3>
-    <p>This plugin has been specifically developed so that you can make your own email templates. All you need to do is copy <?php echo WPM_DIR; ?>/templates/wpm-default.php to your activated theme folder and modify to your needs. You can replace 'default' in the file name with any name of your choice (eg, wpm-hellopeople.php) and make multiple templates which will list here. You can also create a png file with the same name and it will display an image (eg, wpm-hellopeople.png).</p>
+    <p>This plugin has been specifically developed so that you can make your own email templates. I will find some time to complete documentation and maybe put together a video guide on how to do this but for now please read the following discussion for a better idea on how to do this: <a target="_blank" href="https://wordpress.org/support/topic/how-to-make-your-own-theme">https://wordpress.org/support/topic/how-to-make-your-own-theme</a>.</p>
     <p>If you would like to share your mail template then please zip it up and email it to us at support@mailerplugin.com.</p>
 <?php
 
