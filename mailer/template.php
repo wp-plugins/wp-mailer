@@ -9,9 +9,8 @@ function wpm_get_template_path($name=null) {
 }
 
 function wpm_preview_template() {
-    if (isset($_GET['action']) && $_GET['action']=='preview_template' && current_user_can( 'manage_options')) {
+    if (isset($_GET['action']) && $_GET['action']=='wpm_preview_template' && current_user_can( 'manage_options')) {
         $template = sanitize_file_name($_GET['template']);
-
         $template_path = wpm_find_template($template);
         if (!$template_path) die('This template does not exist');
 

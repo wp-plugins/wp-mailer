@@ -12,27 +12,21 @@ The easiest way to automatically send your blog posts straight to your email sub
 
 == Description ==
 
-WP Easy Post Mailer allows your visitors to enter their name and email address on your website to be subscribed to receive updates of new posts from your blog. When you create a new WordPress post, WP Easy Post Mailer will automatically send out a styled email newsletter to all subscribers.
+WP Easy Post Mailer allows you to automatically send out your latest blog posts as email newsletters to your subscribers without the use of any 3rd party email platform. Visitors to your website can enter their name and email address and be subscribed to receive updates of new posts from your blog. When enabled in the admin, WP Easy Post Mailer will automatically send out a styled email newsletter to all subscribers.
 
-WP Easy Post Mailer can be customised and comes with two preset mail templates but we hope that people will submit their own templates and allow us to add them in to the plugin.
-
-We could not find any plugin that get straight to the point and allow users to manage a large list of subscribers and easily send out regular email newsletters without incorporating 3rd party paid platforms.
-
-WP Easy Post Mailer currently uses the built in WordPress mail sending class and you may need to check with your hosting provider as to how many emails you can send out.
+WP Easy Post Mailer can be customised and comes with preset mail templates but you can easily create your own with a little programming knowledge.
 
 **Features are as follows:-**
 
-* Send email campaigns automatically straight from the WordPress admin.
-* Email campaigns are scheduled to send as soon as your post is scheduled to publish.
-* Staggered emailing sending to reduce the risk of being blacklisted.
+* Send email newsletters automatically when a post is published.
+* Staggered emailing sending to reduce server load.
 * Automatic subscribe form and unsubscribe link in email newsletters.
 * Unsubscribe suppression list to ensure you do not accidently reimport unsubscribed users.
-* Multiple customised subscribe forms and three methods of installation.
-* Write your own mail templates in your theme folder utilising the WordPress loop.
+* Customised subscribe forms with three methods of installation.
+* Design and develop your own mail templates within your WordPress theme folder utilising the WordPress loop.
 * Import and export subscribers in standardised CSV format
 
-
-A lot of time and hard work has gone into WP Easy Post Mailer, if you like it then please find the time to rate it.
+If you like it then please find the time to rate it.
 
 == Installation ==
 
@@ -68,6 +62,13 @@ Yes, currently it supports the ability to send email newsletters of WordPress po
 Please take a look at the following discussion post https://wordpress.org/support/topic/how-to-make-your-own-theme
 
 == Changelog ==
+
+= 0.5
+* Fix bug where you can preview templates has stopped working.
+* Fix estimated starting time problems.
+* Reversed jobs list by default.
+* Stop blank campaigns sending when scheduling a post, post must be published.
+* Fix WP DEBUG issue with $success and $failed on jobs.
 
 = 0.4
 * Updated templates page to make it more clear on how to make a theme.

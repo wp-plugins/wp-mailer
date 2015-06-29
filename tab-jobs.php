@@ -32,7 +32,9 @@ class WPM_Table extends WP_List_Table {
                 } else if ($item['job_status']==0) {
                     return '<a class="button button-primary" href="?page='.WPM_FOLDER.'/tab-jobs.php&action=queue&id='.$item['job_id'].'">Queue for Sending</a>';
                 } else if ($item['job_status']==1) {
-                    return 'Starting in '.human_time_diff(wp_next_scheduled('wpm_cron_routine'), time());
+                    $post = get_post($item['job_post_id']);
+                    if ($post->post_status == 'future') return 'Starting in '.human_time_diff(mysql2date('U', $post->post_date), time());
+                    else return 'Starting in '.human_time_diff(wp_next_scheduled('wpm_cron_routine'), time());
                 } else return '';
             case 'job_start':
                 return $item['job_start']<>'0000-00-00 00:00:00'?mysql2date('Y/m/d h:i:s', $item['job_start']):'';
@@ -93,7 +95,7 @@ class WPM_Table extends WP_List_Table {
 
         $table_name = $wpdb->prefix."wpm_jobs";
         $per_page = 100;
-        $def_order = array('job_id', 'asc');
+        $def_order = array('job_id', 'desc');
         $columns = $this->get_columns();
         $hidden = array();
         $sortable = $this->get_sortable_columns();
@@ -124,6 +126,7 @@ class WPM_Table extends WP_List_Table {
 require_once('wpmh.php');
 
 if (isset($_REQUEST['action']) && $_REQUEST['action'] == 'delete' && is_array($_REQUEST['id'])) {
+    $success=0; $failed=0;
     foreach ($_REQUEST['id'] as $id) {
         $result = wpm_delete_job($id);
         if ($result>0) $success++;

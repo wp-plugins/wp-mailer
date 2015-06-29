@@ -5,6 +5,8 @@ defined('ABSPATH') or die('You can not access this file directly.');
 function wpm_send_job($job) {
 
     if (is_int($job)) $job = wpm_get_job($job);
+    $post = get_post($job['job_post_id']);
+    if ($post->post_status != 'publish') return;
 
     $buffer = get_option('wpm_batchsize');
     $pause = get_option('wpm_batchpause');
