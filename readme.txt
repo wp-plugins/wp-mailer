@@ -63,6 +63,9 @@ Please take a look at the following discussion post https://wordpress.org/suppor
 
 == Changelog ==
 
+= 0.6
+* Fix issue stopping campaigns from sending
+
 = 0.5
 * Fix bug where you can preview templates has stopped working.
 * Fix estimated starting time problems.
