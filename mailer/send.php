@@ -52,7 +52,7 @@ function wpm_send_job($job) {
                 if ($title_matches[1]) {
                     $subject = preg_replace('/\s+/', ' ', $title_matches[1]);
                     $subject = trim($subject);
-                    $subject = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $subject);
+                    $subject = preg_replace_callback("/(&#[0-9]+;)/", wpm_convertstring($m), $subject);
                 }
 
                 preg_match("/<style[^>]*>(.*)<\/style>/smiU", $html, $css_matches);
@@ -86,4 +86,7 @@ function wpm_send_job($job) {
         'job_finish' => current_time('mysql'),
         'job_status' => 3 // Completed
     ));
+}
+function wpm_convertstring($m) {
+    return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES");
 }

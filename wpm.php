@@ -3,7 +3,7 @@
 Plugin Name: WP Easy Post Mailer
 Plugin URI: http://www.webfwd.co.uk/
 Description: The easiest way to automatically send your blog posts straight to your email subscribers.
-Version: 0.5
+Version: 0.61
 Author: Webforward
 Author URI: http://www.mailerplugin.com/
 License: GPL

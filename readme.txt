@@ -63,6 +63,9 @@ Please take a look at the following discussion post https://wordpress.org/suppor
 
 == Changelog ==
 
+= 0.61
+* Fix PHP 5.2 specific issues
+
 = 0.6
 * Fix issue stopping campaigns from sending
 

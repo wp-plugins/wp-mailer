@@ -79,7 +79,8 @@ class WPM_Table extends WP_List_Table {
 
         $this->_column_headers = array($columns, $hidden, $sortable);
 
-        $this->process_bulk_action();
+        //Not needed yet
+        //$this->process_bulk_action();
 
         $total_items = $wpdb->get_var("SELECT COUNT(form_id) FROM $table_name");
 
